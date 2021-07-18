@@ -78,6 +78,19 @@ button{
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+.py-5{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.text{
+    font-size: 0.95rem;
+    color: var(--darkCharcoal);
+    margin: 0.6rem 0;
+    font-weight: 300;
+    line-height: 1.6;
+}
 /* navbar */
 .navbar{
     background: #fff;
@@ -137,3 +150,133 @@ button{
     padding: 1rem 0;
     height: 286px;
 }
+
+/* header  */
+.header{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../media/img/cyberpunk_car.jpg) center/cover no-repeat fixed;
+    height: 100vh;
+}
+.header .row{
+    height: 100%;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    
+}
+#typeEffect{
+    font-size: 6rem;
+    font-family: var(--largeFont);
+    font-weight: 900;
+    color: #fff;
+}
+.social-links{
+    display: flex;
+    place-content: center;
+}
+.social-links li a{
+    margin: 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: all .3s ease;
+}
+.social-links li a:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    
+}
+.down-arrow{
+    margin-top: 2.8rem;
+    animation-name: arrowMov;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: ver(--transition);
+}
+.down-arrow a{
+    color: #fff;
+    font-size: 2rem;
+}
+@keyframes arrowMov {
+    0%{transform: translateY(0px);}
+    70%{transform: translateY(-30px);}
+    80%{transform: translateY(0px);}
+    90%{transform: translateY(-15px);}
+    100%{transform: translateY(0px);}
+}
+
+/* a propos  */
+.about .row.one{
+    margin-bottom: 4rem;
+}
+.about .col-right h2{
+    padding: 2rem 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--largeFont);
+}
+.about .col-right .text{
+    padding: 0.4rem 0;
+}
+.about .row.two{
+    background: var(--whiteSmoke);
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    text-align: center;
+}
+.about .row.two .item{
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+}
+.about .row.two .item span{
+    font-size: 2rem;
+}
+.about .row.two .item h3{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.about .row.two .item .text{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (min-width: 500px){
+    #typeEffect{
+        font-size: 5rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .navbar .container{
+        display: flex!important;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .navbar-collapse{
+        height: 100%;
+        flex: 1 0 auto;
+    }
+    .navbar-nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav-item{
+        border-bottom: none;
+        margin:0 1rem;
+    }
+    .navbar-sm{
+        margin: 0;
+        box-shadow: none;
+        flex: 0 0 100px;
+    }
+}
+/* ajanona ny animation transition li rehefa manova abehana window */
+.resize-transition-stopper *{
+    transition: none!important;
+}
+
