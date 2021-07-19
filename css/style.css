@@ -17,11 +17,20 @@
 html{
     scroll-behavior: smooth;
 }
+p{
+    cursor: pointer;
+}
 body{
     line-height: 1.5;
     font-family: var(--smallFont);
     position: relative;
     overflow: hidden;
+}
+img{
+    transition: var(--transition);
+}
+img:hover{
+    transform: scale(1.03);
 }
 
 /* preloader */
@@ -262,6 +271,8 @@ button{
 }
 
 
+
+
 @media screen and (min-width: 500px){
     #typeEffect{
         font-size: 5rem;
@@ -271,6 +282,14 @@ button{
     .about .row.two .container{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+    }
+    .categorie-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2rem;
+    }
+    .categorie-grid .item{
+        margin: 0!important;
     }
 }
 
@@ -317,12 +336,79 @@ button{
     .about .row.two .item .text{
         width: 100%;
     }
+    .categorie-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
-/* ajanona ny animation transition li rehefa manova abehana window */
+/* ajanona ny animation transition li rehefa manova width an'ny window */
 .resize-transition-stopper *{
     transition: none!important;
 }
 
 .about.py-5{
     margin-bottom: 0;
+}
+
+/* categorie */
+.categorie-grid .item{
+    position: relative;
+    margin: 2rem 0;
+}
+.categorie-grid .item::after{
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(100px);
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    transition: var(--transition);
+}
+.categorie-grid .item .sub-item{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transition: var(--transition);
+}
+.categorie-grid .item .sub-item h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: var(--largeFont);
+}
+.categorie-grid .item .sub-item .text{
+    color: #fff;
+}
+.categorie-grid .item:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.categorie-grid .item:hover .sub-item{
+    opacity: 1;
+}
+.categorie-grid .item{
+    width: 400px;
+    height: 400px;
+    transition: var(--transition);
+    
+}
+
+.categorie-grid .item img{
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+    
+}
+.categorie-grid .item:hover img{
+    filter: blur(2px);
+    transform: scale(0.99);
+}
+.categorie-grid .item:hover{
+    transform: scale(1.1);
 }
