@@ -153,7 +153,7 @@ button{
 
 /* header  */
 .header{
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../media/img/cyberpunk_car.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../media/img/PHOTOGRAPHX.jpg) center/cover no-repeat fixed;
     height: 100vh;
 }
 .header .row{
@@ -203,6 +203,26 @@ button{
     90%{transform: translateY(-15px);}
     100%{transform: translateY(0px);}
 }
+/* titre  */
+.title{
+    text-align: center;
+    padding: 0.5rem 0 1.8rem 0;
+}
+.title h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: var(--largeFont);
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+.title .hoz-line{
+    width: 100%;
+    height: 4px;
+    background: var(--darkCharcoal);
+    width: 80px;
+    margin: 0.4rem auto 0.6rem auto;
+}
+
 
 /* a propos  */
 .about .row.one{
@@ -247,6 +267,14 @@ button{
         font-size: 5rem;
     }
 }
+@media screen and (min-width: 768px){
+    .about .row.two .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
 
 @media screen and (min-width: 992px){
     .navbar .container{
@@ -274,9 +302,27 @@ button{
         box-shadow: none;
         flex: 0 0 100px;
     }
+    .about .row.one{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+        align-items: center;
+    }
+    .about .col-right h2{
+        padding-top: 0;
+    }
+    .about .row .container{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .about .row.two .item .text{
+        width: 100%;
+    }
 }
 /* ajanona ny animation transition li rehefa manova abehana window */
 .resize-transition-stopper *{
     transition: none!important;
 }
 
+.about.py-5{
+    margin-bottom: 0;
+}

@@ -17,8 +17,6 @@ window.addEventListener('load', function myfct(e){
     typewritter.typeString('PhotographX.')
         .pauseFor(9000)
         .pauseFor(9000)
-        .deleteAll()
-        .typeString('PhotographY.')
         .pauseFor(9000)
         .pauseFor(9000)
         .start();
@@ -41,7 +39,3 @@ window.addEventListener('load', function myfct(e){
         }
     })
 })
-    
-    
-    
-    
