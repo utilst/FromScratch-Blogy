@@ -32,10 +32,26 @@ window.addEventListener('load', function myfct(e){
     window.addEventListener('scroll', ()=>{
         let position = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop|| 0;
         const navbar = document.querySelector('.navbar');
-        if(position>=800){
-            navbar.style.display="block";
+        const navlink = document.querySelector('.nav-link');
+        const navbrand = document.querySelector('.navbar-brand');
+        
+        if(position>=1){
+            navbar.classList.add("show");
+            navlink.style.color ="#fff";
+            navbrand.classList.add("white");
         }else{
-            navbar.style.display="none";
+            navbar.classList.remove("show");
+            navlink.classList.remove("white");
+            navbrand.classList.remove("white");
+        }
+        
+        if(position>=600){
+            navbar.classList.add("white");
+            navlink.classList.remove("white");
+            navbrand.classList.remove("white");
+        }else{
+            navbar.classList.remove("white");
+            navbrand.classList.add("white");
         }
     })
 })
