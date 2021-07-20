@@ -37,7 +37,7 @@ window.addEventListener('load', function myfct(e){
         
         if(position>=1){
             navbar.classList.add("show");
-            navlink.style.color ="#fff";
+            
             navbrand.classList.add("white");
         }else{
             navbar.classList.remove("show");

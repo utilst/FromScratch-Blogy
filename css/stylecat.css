@@ -42,9 +42,6 @@ body{
 img{
     transition: var(--transition);
 }
-img:hover{
-    transform: scale(1.03);
-}
 /* preloader */
 .preloader{
     position: absolute;
@@ -128,15 +125,6 @@ button{
     top: 0;
     transition: all .3s ease;
 }
-.nav-link.white{
-    color: #fff;
-}
-.navbar-brand.white{
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-transform: capitalize;
-}
 .navbar-sm{
         display: flex;
         justify-content: space-between;
@@ -215,12 +203,7 @@ button{
     width: 80px;
     margin: 0.4rem auto 0.6rem auto;
 }
-@media screen and (min-width: 500px){
-    #typeEffect{
-        font-size: 5rem;
-    }
-}
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1140px){
     .navbar .container{
         display: flex!important;
         align-items: center;
@@ -286,10 +269,67 @@ footer span p{
    margin-right: 30px;
    margin-left: 30px;
 }
-.categorie-grid .item img{
-    width: 400px;
+.all .cate .liste .article img{
+    
+    margin-top: 15px;
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
+}
+.article .image{
     
+    width: 300px;
+    height: 300px;
+    transition: var(--transition);
+    margin-bottom: 50px;
+}
+.article .image:hover{
+    width: 1000px;
+    
+}
+
+
+.article{
+    width: 90%;
+    opacity: 1;
+    display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.article .text{
+    text-align: justify;
+    width: 100%;
+    margin: 20px;
+    transition: all 1s ease;
+}
+
+.article .text .titre{
+   top: 0;
+   font-family: var(--largeFont);
+}
+.article .text .titre h4{
+    top: 0;
+    font-family: var(--smallFont);
+ }
+ .article .text .sous-titre{
+    font-family: var(--smallFont);
+    text-align: justify;
+ }
+ 
+ @media screen and (max-width: 950px){
+     .article{
+         display: block;
+     }
+     .article .image{
+         width: 800px ;
+     }
+}
+.hoz-line{
+    width: 70%;
+    height: 4px;
+    background: var(--darkCharcoal);
+    margin: 0.4rem auto 0.6rem auto;
+}
+.active{
+    color: #c7c7c7;
 }

@@ -217,6 +217,7 @@ button{
     font-family: var(--largeFont);
     font-weight: 900;
     color: #fff;
+    z-index: 10000;
 }
 .social-links{
     display: flex;
@@ -472,15 +473,12 @@ button{
     width: 400px;
     height: 400px;
     transition: var(--transition);
-    
 }
-
 .categorie-grid .item img{
     width: 400px;
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
-    
 }
 .categorie-grid .item:hover img{
     filter: blur(2px);
