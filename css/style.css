@@ -465,6 +465,7 @@ button{
 .categorie-grid .item:hover::after{
     width: 100%;
     height: 100%;
+    border-radius: 4px;
 }
 .categorie-grid .item:hover .sub-item{
     opacity: 1;
@@ -681,4 +682,7 @@ footer span{
 }
 footer span p{
     text-align: center;
+}
+.row .item img{
+    border-radius: 4px;
 }
