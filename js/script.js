@@ -35,16 +35,11 @@ window.addEventListener('load', function myfct(e){
         const navlink = document.querySelector('.nav-link');
         const navbrand = document.querySelector('.navbar-brand');
         
-        if(position>=1){
+        if(position>=500){
             navbar.classList.add("show");
-            
-            navbrand.classList.add("white");
         }else{
             navbar.classList.remove("show");
-            navlink.classList.remove("white");
-            navbrand.classList.remove("white");
         }
-        
         if(position>=600){
             navbar.classList.add("white");
             navlink.classList.remove("white");
